@@ -326,7 +326,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: f16e29a41c1f1a94ab325d2615810096, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 332350572286705143}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: f16e29a41c1f1a94ab325d2615810096, type: 3}
 --- !u!212 &3389375343472971670 stripped
 SpriteRenderer:
@@ -338,6 +341,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: f16e29a41c1f1a94ab325d2615810096, type: 3}
   m_PrefabInstance: {fileID: 2115600926807924594}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9071481677965969434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: f16e29a41c1f1a94ab325d2615810096, type: 3}
+  m_PrefabInstance: {fileID: 2115600926807924594}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &332350572286705143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9071481677965969434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bba3189fae7f2848942f7371fc61b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AstSpinning
+  RotSpeed: 0
 --- !u!1001 &4750566235973626810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -517,13 +538,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: e96ef3d682cdb0647a80c660eb1d283a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8886574248925872610}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: e96ef3d682cdb0647a80c660eb1d283a, type: 3}
 --- !u!4 &1225308460681001519 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: e96ef3d682cdb0647a80c660eb1d283a, type: 3}
   m_PrefabInstance: {fileID: 8958977228038964514}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2084270534176821834 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: e96ef3d682cdb0647a80c660eb1d283a, type: 3}
+  m_PrefabInstance: {fileID: 8958977228038964514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8886574248925872610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084270534176821834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bba3189fae7f2848942f7371fc61b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AstSpinning
+  RotSpeed: 0
 --- !u!212 &5620997479800542662 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 3626916397498700004, guid: e96ef3d682cdb0647a80c660eb1d283a, type: 3}
