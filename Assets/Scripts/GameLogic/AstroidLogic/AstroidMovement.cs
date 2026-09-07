@@ -24,6 +24,16 @@ public class AstroidMovement : MonoBehaviour
         transform.localScale = new Vector3(size, size, 0);
     }
 
+    public class DestroyAfterAnimation : MonoBehaviour
+    {
+        [SerializeField] private float animationLength = 1f;
+
+        private void Start()
+        {
+            Destroy(gameObject, animationLength);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
