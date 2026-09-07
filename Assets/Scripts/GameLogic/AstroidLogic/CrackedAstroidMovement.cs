@@ -12,13 +12,22 @@ public class CAstroidMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         //RanSpeed = UnityEngine.Random.Range(0.05f, 0.07f);
-        RanSpeed = 0.07f;
+        RanSpeed = 0.04f;
     }
 
     // Update is called once per frame
     void Update()
     {
     
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.gameObject.CompareTag("CrackedAstroid"))
+        {
+            Destroy(gameObject);
+            Destroy(collision.collider.gameObject);
+        }
     }
 
     private void FixedUpdate()

@@ -103,10 +103,10 @@ GameObject:
   - component: {fileID: 8005419566826729580}
   - component: {fileID: 8886188668983513789}
   - component: {fileID: 4996801160525333689}
-  - component: {fileID: 93091784129189906}
+  - component: {fileID: 6367899758957730035}
   m_Layer: 0
   m_Name: CrackedAstroid
-  m_TagString: Astroid
+  m_TagString: CrackedAstroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,9 +119,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5930105900157614533}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.5979802, w: 0.8015109}
-  m_LocalPosition: {x: -3.4706624, y: -4.94123, z: 0}
-  m_LocalScale: {x: 0.55781513, y: 0.55781513, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7431448, w: -0.6691307}
+  m_LocalPosition: {x: -5.914916, y: -1.3657386, z: 0}
+  m_LocalScale: {x: 0.5605349, y: 0.5605349, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4926237495930541559}
@@ -190,7 +190,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &93091784129189906
+--- !u!114 &6367899758957730035
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,5 +201,5 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37184c3669785ca4696d41dc225a502d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::CAstroidMovement
   RanSpeed: 0
