@@ -243,6 +243,7 @@ MonoBehaviour:
   RandomRotation: 0
   left: {fileID: 3894520269544773000}
   right: {fileID: 6730251813352668509}
+  explode: {fileID: 1515191032898844426, guid: ffaa22407f02a824688fc806d67d3016, type: 3}
   CrackedAst: {fileID: 5930105900157614533, guid: 6f34a1086c7cad545872e6ab7d848be6, type: 3}
 --- !u!114 &774052485290430376
 MonoBehaviour:

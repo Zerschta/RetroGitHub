@@ -5,6 +5,7 @@ public class CAstroidMovement : MonoBehaviour
 {
 
     public float RanSpeed;
+    public GameObject explode;
 
     Rigidbody2D rb;
 
@@ -25,6 +26,8 @@ public class CAstroidMovement : MonoBehaviour
     {
         if (collision.collider.gameObject.CompareTag("CrackedAstroid"))
         {
+            explode.transform.position = collision.GetContact(0).point;
+            Instantiate(explode);
             Destroy(gameObject);
             Destroy(collision.collider.gameObject);
         }

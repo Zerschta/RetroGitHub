@@ -11,6 +11,7 @@ public class AstroidMovement : MonoBehaviour
     public int RandomRotation;
     public GameObject left;
     public GameObject right;
+    public GameObject explode;
 
     Rigidbody2D rb;
 
@@ -42,13 +43,25 @@ public class AstroidMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.gameObject.CompareTag("Bullet") || collision.collider.gameObject.CompareTag("Astroid"))
+        if (collision.collider.gameObject.CompareTag("Bullet"))
         {
             Destroy(gameObject);
             SpawnCrackedAst();
 
         }
+        else if (collision.collider.gameObject.CompareTag("Astroid")) 
+        {
+            explode.transform.localScale = new Vector3(size * 3, size* 3, 0);
+            explode.transform.position = collision.GetContact(0).point;
+            Instantiate(explode);
+            Destroy(gameObject);
+            SpawnCrackedAst();
+        }
         else if (collision.collider.gameObject.CompareTag("CrackedAstroid")) {
+
+            explode.transform.localScale = new Vector3(size * 3, size * 3, 0);
+            explode.transform.position = collision.GetContact(0).point;
+            Instantiate(explode);
             Destroy(collision.collider.gameObject);
             Destroy(gameObject);
             SpawnCrackedAst();
@@ -71,6 +84,8 @@ public class AstroidMovement : MonoBehaviour
         CrackedAst.transform.localScale = new Vector3(size, size, 0);
         CrackedAst.transform.rotation = UnityEngine.Quaternion.Euler(0, 0, Zless);
         Instantiate(CrackedAst);
+
+        
     }
 
     private void FixedUpdate()
