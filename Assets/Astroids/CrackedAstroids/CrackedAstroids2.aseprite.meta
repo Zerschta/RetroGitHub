@@ -127,7 +127,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: CrackedAstroids2
     originalName: 
-    pivot: {x: 0.5, y: 0.42105263}
+    pivot: {x: 0.5294118, y: 0.53333336}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -135,8 +135,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 18
-      height: 19
+      width: 17
+      height: 15
     spriteID: 565868d813a87cf47a97fa7afe32323d
     spriteBone: []
     spriteOutline: []
@@ -167,8 +167,8 @@ ScriptedImporter:
       cellRect:
         x: 23
         y: 24
-        width: 18
-        height: 19
+        width: 17
+        height: 15
       spriteId: 565868d813a87cf47a97fa7afe32323d
     linkedCells: []
     tileCells: []

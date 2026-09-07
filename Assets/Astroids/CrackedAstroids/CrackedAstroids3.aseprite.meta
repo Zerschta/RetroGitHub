@@ -127,7 +127,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: CrackedAstroids3
     originalName: 
-    pivot: {x: 0.5294118, y: 0.47368422}
+    pivot: {x: 0.5294118, y: 0.5294118}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -136,7 +136,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 17
-      height: 19
+      height: 17
     spriteID: 49a8dc0092ecfa14bbdc7d8b79cd3070
     spriteBone: []
     spriteOutline: []
@@ -168,7 +168,7 @@ ScriptedImporter:
         x: 23
         y: 23
         width: 17
-        height: 19
+        height: 17
       spriteId: 49a8dc0092ecfa14bbdc7d8b79cd3070
     linkedCells: []
     tileCells: []

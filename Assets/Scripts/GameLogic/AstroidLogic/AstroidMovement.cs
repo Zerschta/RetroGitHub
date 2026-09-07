@@ -20,7 +20,7 @@ public class AstroidMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         RanSpeed = UnityEngine.Random.Range(0.03f, 0.05f);
-        size = UnityEngine.Random.Range(0.5f , 1);
+        size = UnityEngine.Random.Range(0.7f , 1.8f);
         transform.localScale = new Vector3(size, size, 0);
     }
 
