@@ -46,17 +46,19 @@ public class AstroidMovement : MonoBehaviour
     }
 
     void SpawnCrackedAst() {
+        int RanMoreZ = UnityEngine.Random.Range(17, 23);
+        int RanLessZ = UnityEngine.Random.Range(17, 23);
 
-        float Zmore = transform.eulerAngles.z + 20;
-        float Zless = transform.eulerAngles.z - 20;
+        float Zmore = transform.eulerAngles.z + RanMoreZ;
+        float Zless = transform.eulerAngles.z - RanLessZ;
 
         CrackedAst.transform.position = left.transform.position;
-        CrackedAst.transform.localScale = new Vector3(size / 1.5f, size / 1.5f, 0);
+        CrackedAst.transform.localScale = new Vector3(size, size, 0);
         CrackedAst.transform.rotation = UnityEngine.Quaternion.Euler(0, 0, Zmore);
         Instantiate(CrackedAst);
 
         CrackedAst.transform.position = right.transform.position;
-        CrackedAst.transform.localScale = new Vector3(size / 1.5f, size / 1.5f, 0);
+        CrackedAst.transform.localScale = new Vector3(size, size, 0);
         CrackedAst.transform.rotation = UnityEngine.Quaternion.Euler(0, 0, Zless);
         Instantiate(CrackedAst);
     }
