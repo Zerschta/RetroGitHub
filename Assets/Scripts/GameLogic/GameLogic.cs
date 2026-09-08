@@ -5,11 +5,29 @@ public class GameLogic : MonoBehaviour
 {
     
     public GameObject Astroid;
+    public GameObject player;
     public int counter = 9; // max 10
 
     void Update()
     {
         SpawnAstroid();
+        
+    }
+   
+
+    Vector2 GetFreeSpawnPosition(float checkRadius, int maxAttempts)
+    {
+        for (int i = 0; i < maxAttempts; i++)
+        {
+            Vector2 candidate = RanWall();
+            Collider2D hit = Physics2D.OverlapCircle(candidate, checkRadius);
+
+            if (hit == null)
+            {
+                return candidate;
+            }
+        }
+        return RanWall();
     }
 
     Vector2 RanWall() {
@@ -37,15 +55,30 @@ public class GameLogic : MonoBehaviour
         return (Fin);
     }
 
-    void SpawnAstroid() {
+    void SpawnAstroid()
+    {
         int value = GameObject.FindGameObjectsWithTag("Astroid").Length;
 
-        while (value <= counter) {            
-            Vector2 SpawnPos = RanWall();
-            float ranRot = UnityEngine.Random.Range(0, 360);
-            Instantiate(Astroid, SpawnPos, Quaternion.Euler(0,0, ranRot));
-            
+        while (value <= counter)
+        {
+            float ranRot = UnityEngine.Random.Range(0f, 360f);
+
+            Vector2 spawnPos = GetFreeSpawnPosition(2f, 20);
+
+            Vector2 direction = (Vector2)player.transform.position - spawnPos;
+
+            int random = UnityEngine.Random.Range(40, 140);
+
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            Instantiate(
+                Astroid,
+                spawnPos,
+                Quaternion.Euler(0f, 0f, angle - random)
+            );
+
             value++;
+
         }
     }
 }

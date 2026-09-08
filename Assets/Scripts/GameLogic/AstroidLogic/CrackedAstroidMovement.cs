@@ -30,6 +30,11 @@ public class CAstroidMovement : MonoBehaviour
             Instantiate(explode);
             Destroy(gameObject);
             Destroy(collision.collider.gameObject);
+
+        }
+        else if (collision.collider.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(gameObject);
         }
     }
 

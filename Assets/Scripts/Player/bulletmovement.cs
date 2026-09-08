@@ -39,7 +39,7 @@ public class bulletmovement : MonoBehaviour
     }
 
     void CheckCorner() {
-        if (transform.position.x <= -11 || transform.position.x >= 11)
+        if (transform.position.x <= -14 || transform.position.x >= 14)
         {
             Destroy(gameObject);
         }

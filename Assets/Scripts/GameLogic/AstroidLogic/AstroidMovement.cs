@@ -51,11 +51,17 @@ public class AstroidMovement : MonoBehaviour
         }
         else if (collision.collider.gameObject.CompareTag("Astroid")) 
         {
-            explode.transform.localScale = new Vector3(size * 4, size * 4, 0);
-            explode.transform.position = collision.GetContact(0).point;
-            Instantiate(explode);
             Destroy(gameObject);
-            SpawnCrackedAst();
+            Destroy(collision.collider.gameObject);
+            if (gameObject.GetEntityId() < collision.gameObject.GetEntityId()) {
+
+                explode.transform.localScale = new Vector3(size * 4, size * 4, 0);
+                explode.transform.position = collision.GetContact(0).point;
+
+                Instantiate(explode);
+                
+                SpawnCrackedAst();
+            }
         }
         else if (collision.collider.gameObject.CompareTag("CrackedAstroid")) {
 
