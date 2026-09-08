@@ -51,7 +51,7 @@ public class AstroidMovement : MonoBehaviour
         }
         else if (collision.collider.gameObject.CompareTag("Astroid")) 
         {
-            explode.transform.localScale = new Vector3(size * 3, size* 3, 0);
+            explode.transform.localScale = new Vector3(size * 4, size * 4, 0);
             explode.transform.position = collision.GetContact(0).point;
             Instantiate(explode);
             Destroy(gameObject);
