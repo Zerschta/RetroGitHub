@@ -127,7 +127,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Astroids2
     originalName: 
-    pivot: {x: 0.4827586, y: 0.51724136}
+    pivot: {x: 0.51724136, y: 0.55172414}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -165,8 +165,8 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 18
-        y: 17
+        x: 17
+        y: 16
         width: 29
         height: 29
       spriteId: a5b893e1c6a3bb8498fa3f6d6287a69b

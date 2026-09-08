@@ -6,6 +6,7 @@ public class bulletmovement : MonoBehaviour
     
 
     public float Speed;
+    public GameObject explode;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,8 +28,13 @@ public class bulletmovement : MonoBehaviour
     {
         if (collision.collider.gameObject.CompareTag("Astroid") || collision.collider.gameObject.CompareTag("CrackedAstroid")) {
 
+            explode.transform.position = collision.GetContact(0).point;
+            Instantiate(explode);
+
             Destroy(gameObject);
             Destroy(collision.collider.gameObject);
+
+            
         }
     }
 
@@ -37,7 +43,7 @@ public class bulletmovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else if (transform.position.y <= -6 || transform.position.y >= 6) { 
+        else if (transform.position.y <= -7 || transform.position.y >= 7) { 
             Destroy(gameObject);
         }
     }

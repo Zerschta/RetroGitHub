@@ -21,7 +21,7 @@ public class AstroidMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         RanSpeed = UnityEngine.Random.Range(0.03f, 0.05f);
-        size = UnityEngine.Random.Range(0.7f , 1.8f);
+        size = UnityEngine.Random.Range(1.2f , 1.8f);
         transform.localScale = new Vector3(size, size, 0);
     }
 
@@ -97,7 +97,7 @@ public class AstroidMovement : MonoBehaviour
 
     void CheckCorner()
     {
-        if (transform.position.x <= -11 || transform.position.x >= 11)
+        if (transform.position.x <= -14 || transform.position.x >= 14)
         {
             Destroy(gameObject);
         }

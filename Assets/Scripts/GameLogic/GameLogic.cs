@@ -15,11 +15,11 @@ public class GameLogic : MonoBehaviour
     Vector2 RanWall() {
         ArrayList RanSpawnVector = new ArrayList();
 
-        int X = UnityEngine.Random.Range(-11 , 11); // Y = -6 or Y = 6
+        int X = UnityEngine.Random.Range(-13 , 13); // Y = -6 or Y = 6
         int Y = UnityEngine.Random.Range(-6, 6); // X = -11 or 11
 
-        Vector2 Left = new Vector2(-11, Y); // left
-        Vector2 Right = new Vector2(11, Y); // right
+        Vector2 Left = new Vector2(-13, Y); // left
+        Vector2 Right = new Vector2(13, Y); // right
         Vector2 Top = new Vector2(X, -6); // top
         Vector2 Bottom = new Vector2(X, 6); // bottom
 
