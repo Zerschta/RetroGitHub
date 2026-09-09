@@ -46,7 +46,6 @@ public class AstroidMovement : MonoBehaviour
         if (collision.collider.gameObject.CompareTag("Bullet"))
         {
             Destroy(gameObject);
-            Destroy(collision.collider.gameObject);
             SpawnCrackedAst();
         }
         else if (collision.collider.gameObject.CompareTag("Astroid")) 
