@@ -46,8 +46,8 @@ public class AstroidMovement : MonoBehaviour
         if (collision.collider.gameObject.CompareTag("Bullet"))
         {
             Destroy(gameObject);
+            Destroy(collision.collider.gameObject);
             SpawnCrackedAst();
-
         }
         else if (collision.collider.gameObject.CompareTag("Astroid")) 
         {
@@ -63,13 +63,15 @@ public class AstroidMovement : MonoBehaviour
                 SpawnCrackedAst();
             }
         }
-        else if (collision.collider.gameObject.CompareTag("CrackedAstroid")) {
+        else if (collision.collider.gameObject.CompareTag("CrackedAstroid")) 
+        {
+            Destroy(collision.collider.gameObject);
+            Destroy(gameObject);
 
             explode.transform.localScale = new Vector3(size * 3, size * 3, 0);
             explode.transform.position = collision.GetContact(0).point;
             Instantiate(explode);
-            Destroy(collision.collider.gameObject);
-            Destroy(gameObject);
+
             SpawnCrackedAst();
         }
     }
@@ -90,8 +92,6 @@ public class AstroidMovement : MonoBehaviour
         CrackedAst.transform.localScale = new Vector3(size, size, 0);
         CrackedAst.transform.rotation = UnityEngine.Quaternion.Euler(0, 0, Zless);
         Instantiate(CrackedAst);
-
-        
     }
 
     private void FixedUpdate()

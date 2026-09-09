@@ -30,11 +30,6 @@ public class bulletmovement : MonoBehaviour
 
             explode.transform.position = collision.GetContact(0).point;
             Instantiate(explode);
-
-            Destroy(gameObject);
-            Destroy(collision.collider.gameObject);
-
-            
         }
     }
 

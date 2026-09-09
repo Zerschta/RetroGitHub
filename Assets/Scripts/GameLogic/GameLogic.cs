@@ -19,18 +19,19 @@ public class GameLogic : MonoBehaviour
     {
         for (int i = 0; i < maxAttempts; i++)
         {
-            Vector2 candidate = RanWall();
+            Vector2 candidate = RandomWallVector();
             Collider2D hit = Physics2D.OverlapCircle(candidate, checkRadius);
+            
 
             if (hit == null)
             {
                 return candidate;
             }
         }
-        return RanWall();
+        return RandomWallVector(); //Fallback
     }
 
-    Vector2 RanWall() {
+    Vector2 RandomWallVector() {
         ArrayList RanSpawnVector = new ArrayList();
 
         int X = UnityEngine.Random.Range(-13 , 13); // Y = -6 or Y = 6
