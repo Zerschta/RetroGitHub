@@ -83,5 +83,8 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W)) PressedW = true;
         if (Input.GetKeyUp(KeyCode.W)) PressedW = false;
     }
+
+    
+
 }
 

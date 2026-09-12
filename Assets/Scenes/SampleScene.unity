@@ -483,7 +483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Astroid: {fileID: 8520791159756981195, guid: 10f526ff8a13f904b8560f3aad3eb1c8, type: 3}
   player: {fileID: 1153743269}
-  counter: 3
+  counter: 4
 --- !u!4 &1628822158
 Transform:
   m_ObjectHideFlags: 0

@@ -25,13 +25,10 @@ public class bulletmovement : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.gameObject.CompareTag("Astroid") || collision.collider.gameObject.CompareTag("CrackedAstroid")) {
-
+    { 
             explode.transform.position = collision.GetContact(0).point;
             Instantiate(explode);
-            Destroy(gameObject);
-        }
+            Destroy(gameObject);  
     }
 
     void CheckCorner() {
