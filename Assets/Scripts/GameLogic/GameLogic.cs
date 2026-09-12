@@ -1,12 +1,23 @@
 using System.Collections;
 using UnityEngine;
 
+
+public class IsDead : MonoBehaviour
+{
+    public static bool Isdead = false;
+}
+
 public class GameLogic : MonoBehaviour
 {
     
     public GameObject Astroid;
     public GameObject player;
     public int counter = 9; // max 10
+
+    private void Start()
+    {
+        IsDead.Isdead = false;
+    }
 
     void Update()
     {
@@ -60,26 +71,30 @@ public class GameLogic : MonoBehaviour
     {
         int value = GameObject.FindGameObjectsWithTag("Astroid").Length;
 
-        while (value <= counter)
+        if (IsDead.Isdead == false)
         {
-            float ranRot = UnityEngine.Random.Range(0f, 360f);
+            while (value <= counter)
+            {
+                float ranRot = UnityEngine.Random.Range(0f, 360f);
 
-            Vector2 spawnPos = GetFreeSpawnPosition(2f, 20);
+                Vector2 spawnPos = GetFreeSpawnPosition(2f, 20);
 
-            Vector2 direction = (Vector2)player.transform.position - spawnPos;
+                Vector2 direction = (Vector2)player.transform.position - spawnPos;
 
-            int random = UnityEngine.Random.Range(40, 140);
+                int random = UnityEngine.Random.Range(40, 140);
 
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-            Instantiate(
-                Astroid,
-                spawnPos,
-                Quaternion.Euler(0f, 0f, angle - random)
-            );
+                Instantiate(
+                    Astroid,
+                    spawnPos,
+                    Quaternion.Euler(0f, 0f, angle - random)
+                );
 
-            value++;
+                value++;
 
+            }
         }
+       
     }
 }
