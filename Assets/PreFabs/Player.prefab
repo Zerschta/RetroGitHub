@@ -136,7 +136,6 @@ GameObject:
   m_Component:
   - component: {fileID: 636861893803309178}
   - component: {fileID: 12301642779883905}
-  - component: {fileID: 5549996733195476808}
   m_Layer: 0
   m_Name: BulletSpawn
   m_TagString: Untagged
@@ -172,23 +171,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::bulletspawner
   bullet: {fileID: 3166710014137055451, guid: 738d33449aa92974aba1df28fa4159c9, type: 3}
-  clip: {fileID: 0}
---- !u!111 &5549996733195476808
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3200493663369104312}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0
 --- !u!1 &5272625654939615272
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,6 +592,7 @@ GameObject:
   - component: {fileID: 6315740379130957370}
   - component: {fileID: 8120778001473883634}
   - component: {fileID: 4404907806515833404}
+  - component: {fileID: 1452421436041500774}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -839,3 +822,20 @@ MonoBehaviour:
   Dead: {fileID: 3640619107929248168}
   explode: {fileID: 1515191032898844426, guid: ffaa22407f02a824688fc806d67d3016, type: 3}
   DamageValue: 0
+--- !u!114 &1452421436041500774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8745796338803729166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37acde291e2bbae43a6d549c9c1e045b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  CrosshairGo: {fileID: 2029112327497297439, guid: 6f1533f055aacfb4baaabd792c0e8d5e, type: 3}
+  distance: 100
+  layer:
+    serializedVersion: 2
+    m_Bits: 8
